@@ -1,0 +1,4 @@
+repository "BedroomPop@KioKaio@cloud"
+  path "/"
+    br "/main"
+    co "/main"
