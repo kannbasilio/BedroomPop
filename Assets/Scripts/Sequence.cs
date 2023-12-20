@@ -6,11 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class ButtonSequenceGame : MonoBehaviour
 {
+    public ScoreManager scoreManager;
+    public AudioSource recordScratch;
     public Button[] buttonsInSequence; // An array to store buttons in the correct sequence
     private int currentIndex;
 
     private void Start()
     {
+      
         currentIndex = 0;
 
     }
@@ -26,7 +29,6 @@ public class ButtonSequenceGame : MonoBehaviour
             if (currentIndex == buttonsInSequence.Length)
             {
                 
-                Debug.Log("It works");
                 SceneManager.LoadScene("Bedroom");
 
             }
@@ -34,11 +36,8 @@ public class ButtonSequenceGame : MonoBehaviour
 
         else
         {
-            ColorBlock colors = button.colors;
-            colors.pressedColor = Color.red;
-            button.colors = colors;
-
-            // Reset sequence if the wrong button is pressed
+            ScoreManager.scoreValue -= 1;
+            recordScratch.Play();
             currentIndex = 0;
 
         }
