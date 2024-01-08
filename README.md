@@ -1,3 +1,5 @@
+# Bedroom Pop
+
 This is my video game, Bedroom Pop, an ear training tool for musicians. 
 
 All the art and sounds in this game are my own, with the exception of the title screen song, which was produced by lukrembo. 
